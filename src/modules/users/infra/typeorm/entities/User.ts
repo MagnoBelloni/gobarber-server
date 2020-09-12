@@ -38,6 +38,13 @@ class User {
             ? `${process.env.APP_API_URL}/files/${this.avatar}`
             : null;
     }
+
+    @Expose({ name: 'avatar_url_mobile' })
+    getAvatar_url_mobile(): string | null {
+        return this.avatar
+            ? `${process.env.APP_MOBILE_URL}/files/${this.avatar}`
+            : null;
+    }
 }
 
 export default User;
